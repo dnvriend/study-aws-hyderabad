@@ -19,7 +19,23 @@ resource "aws_security_group" "sg" {
     from_port   = 22
     protocol    = "tcp"
     to_port     = 22
-    description = "allow-ssh-ingress"
+    description = "allow-ssh"
+  }
+
+  ingress {
+    cidr_blocks = ["0.0.0.0/0"]
+    from_port   = 80
+    protocol    = "tcp"
+    to_port     = 80
+    description = "allow-http"
+  }
+
+  ingress {
+    cidr_blocks = ["0.0.0.0/0"]
+    from_port   = 443
+    protocol    = "tcp"
+    to_port     = 443
+    description = "allow-https"
   }
 
   egress {

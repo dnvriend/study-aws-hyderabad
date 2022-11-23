@@ -16,12 +16,34 @@ locals {
   # ---- region specific settings
   settings = {
     hyderabad = {
-      ami    = "ami-0000ec91aecb8f0fb" # AMZ Linux 2 ARM
-      region = "ap-south-2"
+      ami      = "ami-0000ec91aecb8f0fb" # AMZ Linux 2 ARM
+      region   = "ap-south-2"
+      instance = "t4g.nano" # $0.0028 / $ 0.000800
     }
     ireland = {
-      ami    = "ami-006c19cfa0e8f4672" # AMZ Linux 2 ARM
-      region = "eu-west-1"
+      ami      = "ami-006c19cfa0e8f4672" # AMZ Linux 2 ARM
+      region   = "eu-west-1"
+      instance = "t4g.nano" # $0.0046
+    }
+    london = {
+      ami      = "ami-0b613b958a37cf7c3"
+      region   = "eu-west-2"
+      instance = "t4g.nano" # $0.0047
+    }
+    frankfurt = {
+      ami      = "ami-087924c9e0410af37"
+      region   = "eu-central-1"
+      instance = "t4g.nano" # $0.0048
+    }
+    north-virginia = {
+      ami      = "ami-01b5ec3ed8678d8b7"
+      region   = "us-east-1"
+      instance = "t4g.nano" # $0.0042
+    }
+    oregon = {
+      ami      = "ami-0f96a89e4a6cf08cc"
+      region   = "us-west-2"
+      instance = "t4g.nano" # $0.0042
     }
   }
 

@@ -10,7 +10,7 @@ terraform {
 }
 
 provider "aws" {
-  region = local.settings[local.region_selected]["region"]
-  profile = "default"
+  region                 = local.settings[local.region_selected]["region"]
+  profile                = "default"
   skip_region_validation = true
 }
